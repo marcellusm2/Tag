@@ -1,0 +1,174 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="MasterPage, App_Web_6znaijb8" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SPG Computadores</title>
+    <!-- padrão caracteres especiais -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<!-- ícone da página -->
+		<link rel="icon" href="img/icons/favicon.ico" type="image/x-icon" />		
+		
+		<!-- links para css -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style type="text/css">
+		.site-map
+			{
+				height: 15px;
+				padding-top: 3px;
+				padding-left: 20px;
+			}
+			.site-map a
+			{
+				text-decoration: none;
+			}
+		</style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>    
+<!-- Begin Corpo -->
+<body class="corpo">
+    <form id="form1" runat="server">
+	    <!-- Begin Página -->
+	    <div class="pagina">
+		    <!-- Begin Cabeçalho -->
+		    <div class="container-top">
+			    <!-- Begin Topo -->
+			    <div class="top">
+				    <h1 class="logo">
+					    <a href="vitrine.aspx" title="SPG Computadores" class="logo">
+						    <img src="img/logo.gif" alt="SPG Computadores" />
+					    </a>
+				    </h1>
+				    <div class="containerCarrinho">
+					    <div class="divCarrinho">
+						    <a href="Carrinho.aspx" class="meuCarrinho">Meu Carrinho</a>
+						    <br />
+                            <asp:LinkButton ID="LinkButton1" CssClass="meuCarrinho" runat="server"></asp:LinkButton>
+						    <a href="Carrinho.aspx" class="meuCarrinho"> Produtos</a>
+					    </div>
+					    <div class="imgCarrinho">
+						    <a href="Carrinho.aspx" class="meuCarrinho"><img src="img/carrinho.gif" alt="Carrinho" /></a>
+					    </div>
+				    </div>
+				    <div class="acesso">
+					    <ul class="links">
+						    <li class="first" >
+							    <a href="#" title="Minha Conta" >Minha Conta</a>
+						    </li>
+						    <li>
+							    <a href="#" title="Minha Lista de Desejo" class="top_link_lista-desejo">
+                                Minha Lista de Desejo</a>
+						    </li>
+						    <li class="last" >
+                                <asp:LinkButton ID="LinkUsuario" runat="server" onclick="LinkUsuario_Click">Entrar/Registrar-se</asp:LinkButton>
+						    </li>
+					    </ul>
+				    </div>
+			    </div>
+			    <!-- End Topo -->
+    			
+			    <!-- Begin Menu -->
+			    <div id="menu-container">
+				    <ul id="menu">
+					    <li class="home active"><a href="vitrine.aspx"><span>Home</span></a></li>
+					    <li><a href="Desktops.aspx"><span>Desktops</span></a></li>
+					    <li><a href="Notebooks.aspx"><span>Notebooks</span></a></li>
+					    <li><a href="Monitores.aspx"><span>Monitores</span></a></li>
+					    <li><a href="Impressoras.aspx"><span>Impressoras e Multifuncionais</span></a></li>
+					    <li><a href="#"><span>Acessórios</span></a></li>
+					    <li><a href="#"><span>Serviços</span></a></li>
+					    <li><a href="#"><span>Contato</span></a></li>
+					    <li><a href="#"><span>Sobre</span></a></li>
+				    </ul>
+				    <!-- Begin Caixa Busca -->				    
+				    <div class="form-busca">
+					    <input id="busca" type="text" name="q" value="" class="input-text" />
+					    <input type="image" class="search_btn" src="img/icons/busca.gif" value="Ok"/>
+					    <div id="busca_autocomplete"></div>
+				    </div>
+				    <!-- End Caixa Busca -->
+				</div>
+			</div>
+		    <!-- End Menu -->
+		    <!-- Begin SiteMap -->
+		    <div class="site-map">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" 
+                    Font-Size="0.8em" PathSeparator=" > ">
+                    <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+                    <CurrentNodeStyle ForeColor="#333333" />
+                    <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+                    <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
+                </asp:SiteMapPath>
+		    </div>
+		    <!-- End SiteMap -->
+		    <!-- End Cabeçalho -->
+    		
+		    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+		    </asp:ContentPlaceHolder>
+    		
+		    <!-- Begin Rodapé -->
+		    <div class="footer-container">
+			    <!-- Links -->
+			    <div class="footer">
+				    <div>
+					    <div class="footer-block first">
+						    <h6>Lojas</h6>
+						    <ul>
+							    <li><a href="#">> Computadores</a></li>
+							    <li><a href="#">> Acessórios</a></li>
+							    <li><a href="#">> Serviços</a></li>
+						    </ul>
+					    </div>
+					    <div class="footer-block">
+						    <h6>Suporte</h6>
+						    <ul>
+							    <li><a href="#">> Suporte Técnico</a></li>
+							    <li><a href="#">> Atendimento ao Cliente</a></li>
+							    <li><a href="#">> Mapa do Site</a></li>
+						    </ul>
+					    </div>
+					    <div class="footer-block">
+						    <h6>Sobre a SPG</h6>
+						    <ul>
+							    <li><a href="#">> Carreiras Profissionais</a></li>
+							    <li><a href="#">> Investidores</a></li>
+							    <li><a href="#">> Imprensa</a></li>
+							    <li><a href="#">> Informações da Empresa</a></li>
+						    </ul>
+					    </div>
+					    <div class="footer-block last">
+						    <h6>Minha Conta</h6>
+						    <ul>
+							    <li><a href="#">> Entrar/Registrar-se</a></li>
+							    <li><a href="#">> Status do Meu Pedido</a></li>
+							    <li><a href="#">> Meu Carrinho</a></li>
+						    </ul>
+					    </div>
+					    <div >
+						    <img src="img/cartoes.gif" alt="Aceitamos cartões de crédito" />
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		    <!-- End Links -->
+    		
+		    <!-- Begin Credito -->
+		    <div class="credito">
+			    <div class="credito-left">
+				    <address>&copy; 2010 Tag Computadores. All Rights Reserved.</address>
+			    </div>
+			    <div class="credito-right">
+				    developed by <span>Marcellus</span> and <span>Bruno F.</span>
+			    </div>
+		    </div>
+		    <!-- End Credito -->
+	    </div>
+	    <!-- End Página -->
+	</form>
+</body>
+<!-- End Corpo -->
+</html>

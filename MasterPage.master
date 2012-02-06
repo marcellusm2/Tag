@@ -1,0 +1,232 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="MasterPage, App_Web_ewvsmmra" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Tag Admin</title>
+    <style type="text/css">
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+			}
+			.container-header {
+				width: 100%;
+				height: 70px;
+				background: #000000 url(img/admin-header-bg.gif);
+			}
+			.container-logo {
+				color: white;
+				float: left;
+			}
+			.logo {
+				float: left;
+				margin-left: 50px;
+				margin-top: 15px;
+				font-family: Verdana, Geneva, Arial, sans-serif; 
+				font-size: xx-large;
+			}
+			.logo span {
+				color: red;
+				font-weight: bold;
+			}
+			.sublogo {
+				float: left;
+				margin-top: 45px;
+				color: #C9C9C9;
+				font-family: Verdana, Geneva, Arial, sans-serif;
+				font-size: small;
+			}
+			.container-login {
+				float: right;
+				margin-top: 15px;
+				margin-right: 20px;
+				text-align: right;
+				color: White;
+			}
+			.container-login a, .container-login a:active, .container-login a:link, .container-login a:visited, .container-login a:hover { 			
+				text-decoration: none;
+			}
+				
+			.clear {
+				height: 0.5px;
+				margin: 0px;
+				background-color: #000;
+				display: block;
+			}
+			.container-menu {
+				height: 25px;
+				background: #000000 url(img/admin-menu-bg.gif);
+				text-decoration: none;
+			}
+			.list-menu {
+				display: inline;
+				text-align: left;
+			}
+			.list-menu li {
+				margin-left: 30px;
+				margin-top: 2px;
+				float: left;
+				list-style-type: none;
+            height: 20px;
+        }
+			.list-menu a, .list-menu a:active, .list-menu a:link, .list-menu a:visited, .list-menu a:hover {
+				color: white;
+				text-decoration: none;
+				font-family: Verdana, Geneva, Arial, sans-serif; 
+				font-size: small;
+			}
+			img{ 
+				border:0px;
+			}
+			.container-sitemap
+			{
+				background-color: #E7EFEF;
+				border: 1px solid #ACACAC;
+				height: 20px;
+				padding-top: 3px;
+				padding-left: 20px;
+			}
+			.container-sitemap a
+			{
+				text-decoration: none;
+			}
+			.data-hora
+			{
+				float: left;
+			}
+			.sitemap
+			{
+				float: right;
+				padding-right: 10px;
+			}
+		</style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <div class="container-header">
+			<div class="container-logo">
+				<div class="logo"><span>T</span>ag</div>
+				<div class="sublogo">Computadores</div>
+			</div>
+			<div class="container-login">
+                <asp:Label ID="LabelUsuario" runat="server"></asp:Label>
+                <br />
+                <asp:HyperLink ID="logout" runat="server" Font-Bold="True" ForeColor="#CC0000" 
+                    NavigateUrl="~/Login.aspx">logout</asp:HyperLink>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="container-menu">
+			<ul class="list-menu">
+				<li>
+					<a title="Home" href="Loja/Vitrine.aspx"><img alt="Home" src="img/ico-home.png"> Loja</a>
+				</li>
+				<li>
+					<a title="Usuários" href="Cadastro_Usuario.aspx"><img alt="Usuários" src="img/ico-user.png"> Usuários</a>
+				</li>
+				<li>
+					<a title="Produtos" href="Cadastro_Produto.aspx"><img alt="Produtos" src="img/ico-products.png"> Produtos</a>
+				</li>			
+			</ul>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="container-sitemap">
+		    <div class="data-hora">
+		        <script Language="JavaScript">
+                    <!--
+                    mydate = new Date();
+                    myday = mydate.getDay();
+                    mymonth = mydate.getMonth();
+                    myyear = mydate.getFullYear();
+                    myweekday= mydate.getDate();
+                    weekday= myweekday; 
+
+                    if(myday == 0)
+                    day = " Domingo, " 
+
+                    else if(myday == 1)
+                    day = " Segunda - Feira, " 
+
+                    else if(myday == 2)
+                    day = " Terça - Feira, " 
+
+                    else if(myday == 3)
+                    day = " Quarta - Feira, " 
+
+                    else if(myday == 4)
+                    day = " Quinta - Feira, " 
+
+                    else if(myday == 5)
+                    day = " Sexta - Feira, " 
+
+                    else if(myday == 6)
+                    day = " Sábado, " 
+
+                    if(mymonth == 0)
+                    month = "Janeiro " 
+
+                    else if(mymonth ==1)
+                    month = "Fevereiro " 
+
+                    else if(mymonth ==2)
+                    month = "Março " 
+
+                    else if(mymonth ==3)
+                    month = "Abril " 
+
+                    else if(mymonth ==4)
+                    month = "Maio " 
+
+                    else if(mymonth ==5)
+                    month = "Junho " 
+
+                    else if(mymonth ==6)
+                    month = "Julho " 
+
+                    else if(mymonth ==7)
+                    month = "Agosto " 
+
+                    else if(mymonth ==8)
+                    month = "Setembro " 
+
+                    else if(mymonth ==9)
+                    month = "Outubro " 
+
+                    else if(mymonth ==10)
+                    month = "Novembro " 
+
+                    else if(mymonth ==11)
+                    month = "Dezembro "
+
+                    document.write("<font face=arial, size=2>" + day);
+                    document.write(myweekday+" de "+month+ " de " + myyear + "</font>");
+                    // -->
+                </script>
+		    </div>
+		    <div class="sitemap">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" 
+                    Font-Size="0.7em">
+                    <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+                    <CurrentNodeStyle ForeColor="#333333" />
+                    <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+                    <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
+                </asp:SiteMapPath>
+            </div>
+        </div>
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

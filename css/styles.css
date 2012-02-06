@@ -1,0 +1,82 @@
+﻿/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+
+	HTML GENERAL 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+body, h1, h2, h3, h4, h5, h6, address, blockquote, dd, dl, hr, form, input
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+
+hr
+{
+	border-bottom: 1px solid #CCC;
+	color: #FFF;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+
+	LINKS
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+a
+{
+	color: #009FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover
+{
+	text-decoration: underline;
+	color: #009FFF;
+	font-weight: bold;
+}
+
+a img
+{
+	border: 0;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+
+	IMAGES
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+img
+{
+	border: none;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+
+	HEADINGS & TEXT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: arial, helvetica, sans-serif;
+}
+
+h2, h3
+{
+	font-size: 16px;
+}
+
+label
+{
+	padding-left: 3px;
+}
+
